@@ -1,0 +1,51 @@
+{
+	"name": "PlaywooEngine",
+	"tree": {
+		"$className": "DataModel",
+
+		"ReplicatedFirst": {
+			"$className": "ReplicatedFirst",
+			"Source": {
+				"$path": "src/ReplicatedFirst"
+			}
+		},
+
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"Source": {
+				"$path": "src/ReplicatedStorage"
+			},
+			"Packages": {
+				"$path": "Packages"
+			}
+		},
+
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"$path": "src/ServerScriptService"
+		},
+
+		"ServerStorage": {
+			"$className": "ServerStorage",
+			"Source": {
+				"$path": "src/ServerStorage"
+			}
+		},
+
+		"StarterPlayer": {
+			"$className": "StarterPlayer",
+			"StarterPlayerScripts": {
+				"$className": "StarterPlayerScripts",
+				"Source": {
+					"$path": "src/StarterPlayerScripts"
+				}
+			},
+			"StarterCharacterScripts": {
+				"$className": "StarterCharacterScripts",
+				"Source": {
+					"$path": "src/StarterCharacterScripts"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+std = "roblox"
+
+[config]
+include = ["**/*.lua"]
+exclude = ["**/Packages/**", "Generated/"]
+
+[lints]
+unused_variable = "allow"
+empty_if = "allow"

@@ -1,0 +1,6 @@
+return {
+	_WALK_SPEED = 24,
+	_MAX_WALK_SPEED = 24,
+	_JUMP_POWER = 50,
+	_MAX_JUMP_POWER = 50,
+}

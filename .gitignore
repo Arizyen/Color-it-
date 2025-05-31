@@ -1,0 +1,8 @@
+Packages/
+roblox.yml
+
+# Project place file
+
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock

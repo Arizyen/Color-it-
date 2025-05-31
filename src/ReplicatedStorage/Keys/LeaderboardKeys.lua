@@ -1,0 +1,5 @@
+return {
+	"Wins",
+	"XP",
+	"Robux",
+}
