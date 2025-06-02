@@ -49,7 +49,7 @@ local function DetermineDevProductPurchase(receiptInfo)
 	return Enum.ProductPurchaseDecision.NotProcessedYet
 end
 
-local function CanPurchase(player, assetId)
+local function CanPurchase(player, assetId: number)
 	if not player or type(assetId) ~= "number" then
 		return false
 	end
@@ -62,6 +62,7 @@ local function CanPurchase(player, assetId)
 
 	return false
 end
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 -- GLOBAL FUNCTIONS -------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -100,12 +101,13 @@ function StoreService:OwnsGamepass(player, gamepassKey)
 		return true
 	end
 end
+
 -- PURCHASE ASSET -----------------------------------------------------------------------------------------------------------------------------------
 function StoreService:PurchaseAsset(player, assetId)
 	MarketplaceService:PromptPurchase(player, tonumber(assetId))
 end
 
-function StoreService:PurchaseDevProduct(player, assetId)
+function StoreService:PurchaseDevProduct(player, assetId: number)
 	if not CanPurchase(player, assetId) then
 		return false
 	end
@@ -116,6 +118,7 @@ end
 function StoreService:PurchasePremium(player)
 	MarketplaceService:PromptPremiumPurchase(player)
 end
+
 -- CLIENT FUNCTIONS -----------------------------------------------------------------------------------------------------------------------------------
 function StoreService.Client:PurchaseGamepass(player, gamepassKey)
 	self.Server:PurchaseGamepass(player, gamepassKey)

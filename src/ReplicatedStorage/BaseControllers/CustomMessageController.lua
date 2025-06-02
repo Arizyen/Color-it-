@@ -50,7 +50,7 @@ function CustomMessageController:KnitStart()
 			value = "CustomMessage",
 		})
 
-		Utils.Sound.PlaySound(Utils.Sound.soundInfos.notification1, true)
+		Utils.Sound.Play(Utils.Sound.soundInfos.notification1, true)
 	end)
 end
 -- COMPONENT FUNCTIONS ------------------------------------------------------------------------------------------------------------------------------

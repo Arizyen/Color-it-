@@ -96,15 +96,15 @@ local function ReturnMessageFrame(messageProperties)
 	return CreateMessageFrame(messageProperties)
 end
 
-local function PlaySound(soundId)
+local function Play(soundId)
 	if not soundId then
 		return
 	end
 
 	if Utils.Sound.Infos[soundId] then
-		Utils.Sound.PlaySound(Utils.Sound.Infos[soundId])
+		Utils.Sound.Play(Utils.Sound.Infos[soundId])
 	else
-		Utils.Sound.PlaySound({ SoundId = soundId, Tag = "SoundEffect" })
+		Utils.Sound.Play({ SoundId = soundId, Tag = "SoundEffect" })
 	end
 end
 
@@ -127,7 +127,7 @@ local function ShowMessage(message, messageType, messageProperties)
 
 	local messageFrame = ReturnMessageFrame(messageProperties)
 	if messageFrame and messageFrame:FindFirstChild("TextLabel") then
-		PlaySound(messageProperties["soundId"])
+		Play(messageProperties["soundId"])
 
 		Utils.Tween.Start(messageFrame, 1, Enum.EasingStyle.Quint, Enum.EasingDirection.Out, {
 			Position = UDim2.fromScale(

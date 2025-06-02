@@ -52,12 +52,18 @@ function Coins:ProcessReceipt(receiptInfo)
 		return Enum.ProductPurchaseDecision.NotProcessedYet
 	end
 end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- VIRTUAL METHODS IMPLEMENTATION --------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
-function Coins:IsValid(assetId)
-	return self.CoinsStore[assetId] ~= nil and self.CoinsInfo.infos[self.CoinsStore[assetId]] ~= nil
+function Coins:IsValid(assetId: number)
+	for _, eachInfo in pairs(self.CoinsInfo.infos) do
+		if eachInfo.id == assetId then
+			return true
+		end
+	end
 end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- CONNECTIONS ---------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------

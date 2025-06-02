@@ -39,13 +39,13 @@ local PlayersDataController = require(BaseControllers:WaitForChild("PlayersDataC
 ------------------------------------------------------------------------------------------------------------------------
 PlayersDataController:ObserveKey("musicVolume", function(newValue)
 	if type(newValue) == "number" then
-		Utils.Sound.UpdateTagVolume("Music", newValue / 100)
+		Utils.Sound.SetTagVolume("Music", newValue / 100)
 	end
 end)
 
 PlayersDataController:ObserveKey("soundEffectsVolume", function(newValue)
 	if type(newValue) == "number" then
-		Utils.Sound.UpdateTagVolume("SoundEffect", newValue / 100)
+		Utils.Sound.SetTagVolume("SoundEffect", newValue / 100)
 	end
 end)
 ------------------------------------------------------------------------------------------------------------------------

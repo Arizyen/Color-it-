@@ -8,7 +8,6 @@ local StarterPlayer = game:GetService("StarterPlayer")
 -- Folders -------------------------------------------------------------------------
 local Packages = ReplicatedStorage.Packages
 local ReplicatedSource = ReplicatedStorage.Source
-local Stores = ReplicatedSource.Stores
 local Infos = ReplicatedSource.Infos
 local ReplicatedBaseModules = ReplicatedSource.BaseModules
 local BaseModules = ServerStorage.Source.BaseModules
@@ -22,17 +21,9 @@ Store.InventoryManager = require(BaseModules.InventoryManager)
 Store.NameTag = require(BaseModules.PlayerManager.NameTag)
 Store.Utils = require(ReplicatedSource.Utils)
 
-Store.CannonsStore = require(Stores.CannonsStore)
-Store.CoinsStore = require(Stores.CoinsStore)
-Store.GamepassesStore = require(Stores.GamepassesStore)
-Store.GemsStore = require(Stores.GemsStore)
-Store.SkinsStore = require(Stores.SkinsStore)
-
-Store.CannonsInfo = require(Infos.Store.CannonsInfo)
-Store.CoinsInfo = require(Infos.Store.CoinsInfo)
 Store.GamepassesInfo = require(Infos.Store.GamepassesInfo)
 Store.GemsInfo = require(Infos.Store.GemsInfo)
-Store.GamepassesInfo = require(Infos.Store.GamepassesInfo)
+Store.CoinsInfo = require(Infos.Store.CoinsInfo)
 
 -- KnitServices --------------------------------------------------------------------
 Store.PlayersDataService = require(BaseServices.PlayersDataService)

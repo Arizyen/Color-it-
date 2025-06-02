@@ -110,7 +110,7 @@ local function HotkeyButton(props: props)
 
 			if table.find(props.keyCodes, input.KeyCode) then
 				if props.buttonAnimation == nil or props.buttonAnimation then
-					Utils.Sound.PlaySound(Utils.Sound.Infos.MouseButton1Down)
+					Utils.Sound.Play(Utils.Sound.Infos.MouseButton1Down)
 					clicked.current = true
 					motor:setGoal(Flipper.Instant.new(0))
 				end

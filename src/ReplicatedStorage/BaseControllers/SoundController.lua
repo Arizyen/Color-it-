@@ -36,9 +36,9 @@ function SoundController:KnitInit()
 end
 
 function SoundController:KnitStart()
-	knitServices["Sound"].PlaySound:Connect(Utils.Sound.PlaySound)
-	knitServices["Sound"].PlaySoundOnPart:Connect(Utils.Sound.PlaySoundOnPart)
+	knitServices["Sound"].Play:Connect(Utils.Sound.Play)
 end
+
 -- COMPONENT FUNCTIONS ------------------------------------------------------------------------------------------------------------------------------
 
 -- CLIENT - SERVER FUNCTIONS ------------------------------------------------------------------------------------------------------------------------

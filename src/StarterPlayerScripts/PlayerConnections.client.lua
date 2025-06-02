@@ -34,7 +34,7 @@ local function CreateHealthChangedConnection(player, humanoid)
 				Utils.Signals.Fire("PlayerDied", player)
 
 				if player == game.Players.LocalPlayer then
-					Utils.Sound.PlaySound(Utils.Sound.Infos.Drumroll2)
+					Utils.Sound.Play(Utils.Sound.Infos.Drumroll2)
 				end
 			end
 		end)

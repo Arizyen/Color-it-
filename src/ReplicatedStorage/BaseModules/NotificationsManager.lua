@@ -7,7 +7,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Source = ReplicatedStorage:WaitForChild("Source")
 local ReplicatedBaseModules = Source:WaitForChild("BaseModules")
 local UI = Source:WaitForChild("UI")
-local Notifications = UI:WaitForChild("Notifications")
+local App = UI:WaitForChild("App")
+local Notifications = App:WaitForChild("Notifications")
 
 -- Modulescripts
 local Utils = require(Source:WaitForChild("Utils"))
@@ -151,7 +152,7 @@ function NotificationsManager.ShowNotification(
 	AddComponentNotificationCount(componentName, true)
 
 	if not noNotificationSound then
-		Utils.Sound.PlaySound({ SoundId = "rbxassetid://11646730151", Tag = "SoundEffect" })
+		Utils.Sound.Play({ SoundId = "rbxassetid://11646730151", Tag = "SoundEffect" })
 	end
 
 	Utils.Signals.Fire("DispatchAction", {

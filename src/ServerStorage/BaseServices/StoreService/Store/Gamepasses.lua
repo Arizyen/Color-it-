@@ -22,8 +22,8 @@ setmetatable(Gamepasses, { __index = Store })
 -- LOCAL FUNCTIONS -----------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 local function GetGamepassKeyFromId(gamePassId)
-	for key, value in pairs(Gamepasses.GamepassesStore) do
-		if value == gamePassId then
+	for key, gamepassInfo in pairs(Gamepasses.GamepassesInfo.infos) do
+		if gamepassInfo.id == gamePassId then
 			return key
 		end
 	end
@@ -63,13 +63,14 @@ function Gamepasses:PlayerPurchasedGamePass(player, gamePassId, success)
 end
 
 function Gamepasses:GetGamepassId(gamepassKey)
-	return self.GamepassesStore[gamepassKey]
+	return self.GamepassesInfo.infos[gamepassKey] and self.GamepassesInfo.infos[gamepassKey].id or nil
 end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- VIRTUAL METHODS IMPLEMENTATION --------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 function Store:IsValid(gamepassKey)
-	return self.GamepassesStore[gamepassKey] ~= nil
+	return self.GamepassesInfo.infos[gamepassKey] ~= nil
 end
 
 function Store:CanPurchase(player, gamepassKey)
@@ -84,6 +85,7 @@ function Store:CanPurchase(player, gamepassKey)
 
 	return true
 end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- CONNECTIONS ---------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------

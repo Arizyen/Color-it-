@@ -92,7 +92,7 @@ local function NumericUpDown(props)
 					if intervalIncreaseCount >= intervalIncrease then
 						intervalIncreaseCount -= intervalIncrease
 						Increase(value > 0)
-						Utils.Sound.PlaySound({
+						Utils.Sound.Play({
 							SoundId = 14930937370,
 							Volume = 1,
 							Tag = "SoundEffect",

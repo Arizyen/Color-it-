@@ -21,6 +21,7 @@ local EntitiesData = require(BaseModules.EntitiesData)
 local MAX_EXPLOITING_CHANCES = 2
 local _ANTI_CHEAT_VERSION = 1
 local _BANNED_DAYS = 3
+
 -- Variables -----------------------------------------------------------------------
 
 -- Tables --------------------------------------------------------------------------

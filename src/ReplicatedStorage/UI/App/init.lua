@@ -12,6 +12,8 @@ local ReactRedux = require(Packages:WaitForChild("ReactRedux"))
 local Utils = require(Source:WaitForChild("Utils"))
 local CameraManager = require(ReplicatedBaseModules:WaitForChild("CameraManager"))
 
+local Background = require(script:WaitForChild("Background"))
+
 -- KnitControllers
 
 -- Instances
@@ -63,7 +65,9 @@ local function App(props)
 	end, appEnabled)
 
 	-- COMPONENT ----------------------------------------------------------------------------------------------------------------------------------
-	return {}
+	return {
+		Background = e(Background),
+	}
 end
 
 return App

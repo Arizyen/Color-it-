@@ -174,9 +174,7 @@ function Badges.VerifyPlayer(player)
 		return
 	end
 
-	Badges.VerifyPlayerBadgeType(player, "WinsEasy", "wins")
-	Badges.VerifyPlayerBadgeType(player, "WinsIntermediate", "wins")
-	Badges.VerifyPlayerBadgeType(player, "WinsPro", "wins")
+	-- Badges.VerifyPlayerBadgeType(player, "WinsEasy", "wins")
 end
 
 function Badges.VerifyPlayerBadgeType(player, badgeType, dataKey)

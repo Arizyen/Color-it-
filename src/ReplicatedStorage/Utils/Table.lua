@@ -271,7 +271,7 @@ end
 
 -- Will add items from tableToAddFrom in tableToAddTo while ignoring duplicates
 function Table.AddUniqueItems(tableToAddTo: table, tableToAddFrom: table): ()
-	if type(tableToAddTo) ~= "table" or not type(tableToAddFrom) ~= "table" then
+	if type(tableToAddTo) ~= "table" or type(tableToAddFrom) ~= "table" then
 		return
 	end
 

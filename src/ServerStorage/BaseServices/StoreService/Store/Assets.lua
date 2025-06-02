@@ -61,6 +61,7 @@ function Assets:PlayerBoughtAsset(player, assetId, isPurchased)
 	print("Total asset bought in server: " .. tostring(totalAssetsBought))
 	print("Total estimated commission earnings from asset: " .. tostring(totalAssetsEarning))
 end
+
 ------------------------------------------------------------------------------------------------------------------------
 -- VIRTUAL METHODS IMPLEMENTATION --------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
